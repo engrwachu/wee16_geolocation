@@ -24,7 +24,7 @@ pipeline {
             steps{
 
              sh 'curl -uadmin:AP5mZ1TGxbfJg5s8o7m1rRSRP4i -T \
-             target/bioMedical-0.0.2-SNAPSHOT.jar \
+             /var/lib/jenkins/workspace/geo-app/target/bioMedical-0.0.2-SNAPSHOT.jar \
              "http://ec2-3-92-206-213.compute-1.amazonaws.com:8081/artifactory/geoapp/"'
             }
         }
