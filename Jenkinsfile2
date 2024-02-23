@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('sonarqube scan'){
             steps{
-                sh 'mvn sonar:sonar'
+                sh 'mvn mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=engrwachu_wee16_geolocation'
             }
         }
         stage('maven commands'){
