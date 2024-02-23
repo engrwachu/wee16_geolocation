@@ -18,6 +18,17 @@ pipeline {
                 sh 'mvn clean test compile install package'
             }
 
-        } 
+        }
+
+        stage('uplaod artifact'){
+            steps{
+
+             sh 'curl -uadmin:AP5mZ1TGxbfJg5s8o7m1rRSRP4i -T \
+             target/bio*.jar \
+             "http://ec2-3-92-206-213.compute-1.amazonaws.com:8081/artifactory/geoapp/"'
+            }
+        }
+        
+
     }
 }
