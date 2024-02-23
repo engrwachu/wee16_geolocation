@@ -11,13 +11,12 @@ pipeline {
             }
             }
         }
-    }
+    
         stage('maven commands'){
             steps{
                 sh 'mvn clean compile install package'
             }
-        }
 
-            
+        } 
     }
-
+}
