@@ -17,7 +17,6 @@ pipeline {
             steps{
                 sh 'mvn clean test compile install package'
             }
-
         }
 
         stage('uplaod artifact'){
